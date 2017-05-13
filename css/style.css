@@ -1,0 +1,85 @@
+body {
+    background: #fff;
+    background: #fff;
+    color: #252525;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 26px;
+    margin-top: 60px;
+    position: relative;
+}
+
+.navbar-default {
+    background-color: #252525;
+    padding: 8px 0;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+/*=======================
+  Footer CSS
+=========================*/
+#footer {
+	background: #252525;
+	border-top: 1px solid rgba(221, 221, 221, 0.22);
+	padding: 10px 0;
+}
+#footer .copyright{
+	padding:5px 0;
+	float:left;
+}
+#footer .copyright p{
+	color:#fff;
+	margin:0;
+}
+#footer .copyright span{
+	margin:0px 5px;
+}
+#footer .social {
+	float: right;
+	margin-top: 5px;
+}
+#footer .social li {
+	display: inline-block;
+	margin-right: 10px;
+	color:#bbb;
+	font-weight:500;
+}
+#footer .social li:last-child{
+	margin-right:0;
+}
+#footer .social a {
+	display: block;
+	width: 26px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	color: #fff;
+	border-radius: 100%;
+	border:1px solid transparent;
+}
+#footer .social li:hover a{
+	background:transparent;
+}
+#footer .social li:hover a i{
+	opacity: 0;
+    -webkit-animation-name: hvr-icon-drop;
+    animation-name: hvr-icon-drop;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    animation-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+/*=======================
+  End Footer CSS
+=========================*/
