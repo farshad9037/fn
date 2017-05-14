@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mukesh Ambani</title>
+    <title>jQuery Website Template</title>
 
     <!-- CSS [Start] -->
     <link href="vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -33,14 +33,14 @@
             <div class="col-md-10 col-sm-12 col-xs-12">
                 <div class="collapse navbar-collapse" id="navbar-mobile">
                     <ul class="nav navbar-nav">
-                        <li><a href="#home">HOME</a></li>
-                        <li><a href="#about">ABOUT</a></li>
-                        <li><a href="#service">SERVICE</a></li>
-                        <li><a href="#team">TEAM</a></li>
-                        <li><a href="#project">PROJECT</a></li>
-                        <li><a href="#testimonials">TESTIMONIALS</a></li>
-                        <li><a href="#blog">BLOG</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
+                        <li onclick="scrollToSection(home)"><a href="#home">HOME</a></li>
+                        <li onclick="scrollToSection(about)"><a href="#about">ABOUT</a></li>
+                        <li onclick="scrollToSection(service)"><a href="#service">SERVICE</a></li>
+                        <li onclick="scrollToSection(team)"><a href="#team">TEAM</a></li>
+                        <li onclick="scrollToSection(project)"><a href="#project">PROJECT</a></li>
+                        <li onclick="scrollToSection(testimonials)"><a href="#testimonials">TESTIMONIALS</a></li>
+                        <li onclick="scrollToSection(blog)"><a href="#blog">BLOG</a></li>
+                        <li onclick="scrollToSection(contact)"><a href="#contact">CONTACT</a></li>
                     </ul>
                 </div>
             </div>
@@ -56,26 +56,7 @@
     <div id="blog"></div>
     <div id="contact"></div>
 
-    <footer id="footer" class="clearfix">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <div class="copyright">
-                        <p>©Copyright 2017</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <ul class="social">
-                        <li>Follow Us</li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <footer id="footer" class="clearfix"></footer>
 
     <!-- JS Files [Start]-->
     <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
