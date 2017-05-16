@@ -20,6 +20,14 @@ body {
     margin-bottom: 0;
 }
 
+#header li a {
+	color: #ffffff;
+}
+
+#header .nav li:hover a, #header .nav li.active a {
+    background-color: #F2784B;
+    border-radius: 25px 0;
+}
 /*=======================
   Footer CSS
 =========================*/
@@ -83,3 +91,8 @@ body {
 /*=======================
   End Footer CSS
 =========================*/
+
+img {
+    width: 100%;
+    height: auto;
+}

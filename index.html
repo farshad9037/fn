@@ -9,17 +9,18 @@
 
     <!-- CSS [Start] -->
     <link href="vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
     <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <!-- CSS [End] -->
 
 </head>
 
-<body>
-    <nav class="navbar navbar-default navbar-fixed-top">
+<body ng-app="webApp" ng-controller="commonCtrl">
+    <nav id="header" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="col-md-2 col-sm-12 col-xs-12">
-                <a class="navbar-brand" href="#">LOGO</a>
+                <a class="navbar-brand" href="#">MA Yusuffali</a>
             </div>
             <div>
                 <button type="button" style="margin-top: -40px" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-mobile"
@@ -33,34 +34,36 @@
             <div class="col-md-10 col-sm-12 col-xs-12">
                 <div class="collapse navbar-collapse" id="navbar-mobile">
                     <ul class="nav navbar-nav">
-                        <li onclick="scrollToSection(home)"><a href="#home">HOME</a></li>
-                        <li onclick="scrollToSection(about)"><a href="#about">ABOUT</a></li>
-                        <li onclick="scrollToSection(service)"><a href="#service">SERVICE</a></li>
-                        <li onclick="scrollToSection(team)"><a href="#team">TEAM</a></li>
-                        <li onclick="scrollToSection(project)"><a href="#project">PROJECT</a></li>
-                        <li onclick="scrollToSection(testimonials)"><a href="#testimonials">TESTIMONIALS</a></li>
-                        <li onclick="scrollToSection(blog)"><a href="#blog">BLOG</a></li>
-                        <li onclick="scrollToSection(contact)"><a href="#contact">CONTACT</a></li>
+                        <li ng-click="gotoAnchor('home')"><a>HOME</a></li>
+                        <li ng-click="gotoAnchor('about')"><a>ABOUT</a></li>
+                        <li ng-click="gotoAnchor('service')"><a>SERVICE</a></li>
+                        <li onclick="scrollToSection(team)"><a>TEAM</a></li>
+                        <li onclick="scrollToSection(project)"><a>PROJECT</a></li>
+                        <li onclick="scrollToSection(testimonials)"><a>TESTIMONIALS</a></li>
+                        <li onclick="scrollToSection(blog)"><a>BLOG</a></li>
+                        <li onclick="scrollToSection(contact)"><a>CONTACT</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
 
-    <div id="home"></div>
-    <div id="about"></div>
-    <div id="service"></div>
-    <div id="team"></div>
-    <div id="project"></div>
-    <div id="testimonials"></div>
-    <div id="blog"></div>
-    <div id="contact"></div>
+    <div id="home" ui-view="home"></div>		
+    <div id="about" ui-view="about"></div>		
+    <div id="service" ui-view="service"></div>
 
-    <footer id="footer" class="clearfix"></footer>
+    <footer id="footer" class="clearfix">
+        <div ui-view="footer"></div>
+    </footer>
 
     <!-- JS Files [Start]-->
     <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
     <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
     <script src="js/main.js"></script>
     <!-- JS Files [End]-->
 </body>
