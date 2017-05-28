@@ -23,7 +23,10 @@
         <div class="container-fluid">
             <div class="col-md-6 col-sm-12 col-xs-12">
                 <a class="page-title navbar-brand" href="#">
-                    <div><strong>D</strong>hirubhai <strong>A</strong>mbani</div>
+                    <div class="logo-container">
+                        <img class="logo-image" src="css/images/logo.png">
+                        <span><strong>D</strong>hirubhai <strong>A</strong>mbani</span>
+                    </div>
                 </a>
             </div>
             <div>
@@ -40,10 +43,10 @@
                     <ul class="nav navbar-nav">
                         <li ng-click="gotoAnchor('home')"><a>HOME</a></li>
                         <li ng-click="gotoAnchor('about')"><a>ABOUT</a></li>
+                        <li ng-click="gotoAnchor('childhood')"><a>CHILDHOOD</a></li>
                         <li ng-click="gotoAnchor('gallery')"><a>GALLERY</a></li>
                         <li ng-click="gotoAnchor('career')"><a>CAREER</a></li>
                         <li ng-click="gotoAnchor('works')"><a>WORKS</a></li>
-                        <li ng-click="gotoAnchor('achievements')"><a>ACHIEVEMENTS</a></li>
                     </ul>
                 </div>
             </div>
@@ -52,6 +55,7 @@
 
     <div id="home" ui-view="home"></div>
     <div ui-view="about"></div>
+    <div ui-view="childhood"></div>
     <div ui-view="gallery"></div>
 
     <!--<footer id="footer" class="clearfix">

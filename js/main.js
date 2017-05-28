@@ -19,6 +19,9 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
                 'gallery': {
                     templateUrl: 'partials/gallery.html'
                 },
+                'childhood': {
+                    templateUrl: 'partials/childhood.html'
+                },
                 'footer': {
                     templateUrl: 'partials/footer.html'
                 }
