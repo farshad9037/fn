@@ -5,22 +5,25 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>jQuery Website Template</title>
+    <base href="/">
+    <title>Dhirubhai Ambani</title>
 
-    <!-- CSS [Start] -->
+    <!-- CSS Files [Start] -->
+    <link rel="icon" type="image/png" href="css/images/machinser.png">
     <link href="vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!--<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
     <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <!-- CSS [End] -->
+    <!-- CSS Files [End] -->
 
 </head>
 
-<body ng-app="webApp" ng-controller="commonCtrl">
+<body ng-app="webApp" ng-controller="CommonCtrl">
     <nav id="header" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
-            <div class="col-md-2 col-sm-12 col-xs-12">
-                <a class="navbar-brand" href="#">MA Yusuffali</a>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <a class="page-title navbar-brand" href="#">
+                    <div><strong>D</strong>hirubhai <strong>A</strong>mbani</div>
+                </a>
             </div>
             <div>
                 <button type="button" style="margin-top: -40px" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-mobile"
@@ -31,17 +34,15 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
-            <div class="col-md-10 col-sm-12 col-xs-12">
+            <div class="col-md-6 col-sm-12 col-xs-12">
                 <div class="collapse navbar-collapse" id="navbar-mobile">
                     <ul class="nav navbar-nav">
                         <li ng-click="gotoAnchor('home')"><a>HOME</a></li>
                         <li ng-click="gotoAnchor('about')"><a>ABOUT</a></li>
-                        <li ng-click="gotoAnchor('service')"><a>SERVICE</a></li>
-                        <li onclick="scrollToSection(team)"><a>TEAM</a></li>
-                        <li onclick="scrollToSection(project)"><a>PROJECT</a></li>
-                        <li onclick="scrollToSection(testimonials)"><a>TESTIMONIALS</a></li>
-                        <li onclick="scrollToSection(blog)"><a>BLOG</a></li>
-                        <li onclick="scrollToSection(contact)"><a>CONTACT</a></li>
+                        <li ng-click="gotoAnchor('childhood')"><a>CHILDHOOD</a></li>
+                        <li ng-click="gotoAnchor('career')"><a>CAREER</a></li>
+                        <li ng-click="gotoAnchor('works')"><a>WORKS</a></li>
+                        <li ng-click="gotoAnchor('achievements')"><a>ACHIEVEMENTS</a></li>
                     </ul>
                 </div>
             </div>
@@ -49,8 +50,8 @@
     </nav>
 
     <div id="home" ui-view="home"></div>		
-    <div id="about" ui-view="about"></div>		
-    <div id="service" ui-view="service"></div>
+    <div ui-view="about"></div>		
+    <div ui-view="childhood"></div>
 
     <footer id="footer" class="clearfix">
         <div ui-view="footer"></div>
@@ -59,11 +60,11 @@
     <!-- JS Files [Start]-->
     <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
     <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
-    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+    <script src="vendors/angular/angular-1.6.1.js"></script>
+    <script src="vendors/angular/angular-ui-router.js"></script>
+    <script src="vendors/angular/angular-animate.js"></script>
+    <script src="vendors/angular/angular-sanitize.js"></script>
+    <script src="vendors/angular/ui-bootstrap-tpls-2.5.0.js"></script>
     <script src="js/main.js"></script>
     <!-- JS Files [End]-->
 </body>
