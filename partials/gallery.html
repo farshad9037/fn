@@ -1,7 +1,13 @@
-<div id="gallery">
-    <li ng-repeat="image in images">
-        <a ng-click="openLightboxModal($index)">
-            <img style="width: 100px; height: 100px" ng-src="{{image.thumbUrl}}" class="img-thumbnail">
-        </a>
-    </li>
+<div id="gallery" class="clearfix col-md-12 col-sm-12 col-xs-12" style="padding: 15px;">
+    <div class="text-center">
+        <h2 style="color: #333; font-weight: 700; margin-top: 0; margin-bottom: 15px;">IMAGE GALLERY</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-3 col-sm-3 col-xs-6" ng-repeat="image in images">
+            <div class="thumbs-container" ng-click="openLightboxModal($index)">
+                <div class="thumbs-image-container">
+                <img ng-src="{{image.thumbUrl}}">
+            </div>
+        </div>
+    </div>
 </div>
