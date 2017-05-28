@@ -12,6 +12,7 @@
     <link rel="icon" type="image/png" href="css/images/machinser.png">
     <link href="vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link  href="vendors/angular/angular-bootstrap-lightbox.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <!-- CSS Files [End] -->
 
@@ -39,7 +40,7 @@
                     <ul class="nav navbar-nav">
                         <li ng-click="gotoAnchor('home')"><a>HOME</a></li>
                         <li ng-click="gotoAnchor('about')"><a>ABOUT</a></li>
-                        <li ng-click="gotoAnchor('childhood')"><a>CHILDHOOD</a></li>
+                        <li ng-click="gotoAnchor('gallery')"><a>GALLERY</a></li>
                         <li ng-click="gotoAnchor('career')"><a>CAREER</a></li>
                         <li ng-click="gotoAnchor('works')"><a>WORKS</a></li>
                         <li ng-click="gotoAnchor('achievements')"><a>ACHIEVEMENTS</a></li>
@@ -49,9 +50,9 @@
         </div>
     </nav>
 
-    <div id="home" ui-view="home"></div>		
-    <div ui-view="about"></div>		
-    <div ui-view="childhood"></div>
+    <div id="home" ui-view="home"></div>
+    <div ui-view="about"></div>
+    <div ui-view="gallery"></div>
 
     <footer id="footer" class="clearfix">
         <div ui-view="footer"></div>
@@ -65,6 +66,7 @@
     <script src="vendors/angular/angular-animate.js"></script>
     <script src="vendors/angular/angular-sanitize.js"></script>
     <script src="vendors/angular/ui-bootstrap-tpls-2.5.0.js"></script>
+    <script src="vendors/angular/angular-bootstrap-lightbox.js"></script>
     <script src="js/main.js"></script>
     <!-- JS Files [End]-->
 </body>
