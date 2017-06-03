@@ -11,10 +11,14 @@
                     </div>
                 </div>
                 <h4 class="text-center" ng-bind="image.year"></h3>
-                <p ng-bind="image.description"></p>
-                <div class="text-right">
-                    <a>Read More...</a>
-                </div>
+                <hm-read-more 
+                    hm-text="{{ image.description }}"
+                    hm-limit="300"
+                    hm-more-text="read more" 
+                    hm-less-text="read less"
+                    hm-dots-class="dots"
+                    hm-link-class="links">
+                </hm-read-more>
             </div>
         </div>
     </div>

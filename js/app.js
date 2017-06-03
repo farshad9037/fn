@@ -1,17 +1,36 @@
 
 'use strict';
-define(['angularAMD', 'uiRouter', 'bootstrapLightbox', 'angularSanitize', 'angularAnimate'], function (angularAMD) {
+define(['angularAMD', 'uiRouter', 'bootstrapLightbox', 'angularSanitize', 'angularAnimate', 'angularReadMore'], function (angularAMD) {
     var app = angular.module('webApp', [
         'ui.router',
         'ngAnimate',
         'ngSanitize',
         'ui.bootstrap',
-        'bootstrapLightbox'
+        'bootstrapLightbox',
+        'hm.readmore'
     ]);
 
     app.run(['$anchorScroll', function ($anchorScroll) {
         $anchorScroll.yOffset = 60;
-    }])
+    }]);
+
+    app.config([
+        '$stateProvider',
+        '$urlRouterProvider',
+        '$controllerProvider',
+        '$compileProvider',
+        '$filterProvider',
+        '$provide',
+        function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvider, $filterProvider, $provide) {
+            app.register = {
+                controller: $controllerProvider.register,
+                directive: $compileProvider.directive,
+                filter: $filterProvider.register,
+                factory: $provide.factory,
+                service: $provide.service
+            };
+        }
+    ]);
 
     app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
         $urlRouterProvider.when('', '/');

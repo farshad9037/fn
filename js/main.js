@@ -9,7 +9,9 @@ require.config({
         'bootstrapLightbox': 'vendors/angular/angular-bootstrap-lightbox',
         'angularSanitize': 'vendors/angular/angular-sanitize',
         'angularAnimate': 'vendors/angular/angular-animate',
-        'bootstrap': 'vendors/bootstrap/js/bootstrap.min'
+        'bootstrap': 'vendors/bootstrap/js/bootstrap.min',
+
+        'angularReadMore': 'vendors/angular/readmore'
     },
     shim: {
         'angular': ['jQuery'],
@@ -19,7 +21,8 @@ require.config({
         'uiBootstrap': ['angular', 'bootstrap'],
         'bootstrapLightbox': ['uiBootstrap'],
         'angularSanitize': ['angular'],
-        'angularAnimate': ['angular']
+        'angularAnimate': ['angular'],
+        'angularReadMore': ['angularSanitize']
     },
     deps: [
         'app'
