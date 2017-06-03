@@ -10,15 +10,15 @@
 
     <!-- CSS Files [Start] -->
     <link rel="icon" type="image/png" href="css/images/machinser.png">
-    <link href="vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link  href="vendors/angular/angular-bootstrap-lightbox.css" rel="stylesheet">
+    <link href="js/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="js/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link  href="js/vendors/angular/angular-bootstrap-lightbox.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <!-- CSS Files [End] -->
 
 </head>
 
-<body ng-app="webApp" ng-controller="CommonCtrl">
+<body ng-controller="CommonController">
     <nav id="header" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="col-md-6 col-sm-12 col-xs-12">
@@ -63,15 +63,8 @@
     </footer>-->
 
     <!-- JS Files [Start]-->
-    <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
-    <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
-    <script src="vendors/angular/angular-1.6.1.js"></script>
-    <script src="vendors/angular/angular-ui-router.js"></script>
-    <script src="vendors/angular/angular-animate.js"></script>
-    <script src="vendors/angular/angular-sanitize.js"></script>
-    <script src="vendors/angular/ui-bootstrap-tpls-2.5.0.js"></script>
-    <script src="vendors/angular/angular-bootstrap-lightbox.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/vendors/require/require.js" data-main="js/main.js"></script>
+    <!--<script src="vendors/bootstrap/js/bootstrap.min.js"></script>-->
     <!-- JS Files [End]-->
 </body>
 
