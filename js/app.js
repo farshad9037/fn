@@ -1,6 +1,6 @@
 
 'use strict';
-define(['angularAMD', 'uiRouter', 'bootstrapLightbox', 'angularSanitize', 'angularAnimate', 'angularReadMore'], function (angularAMD) {
+define(['angularAMD', 'uiRouter', 'bootstrapLightbox', 'angularSanitize', 'angularAnimate', 'angularReadMore', 'directives/setViewportHeightDirective'], function (angularAMD) {
     var app = angular.module('webApp', [
         'ui.router',
         'ngAnimate',
@@ -11,7 +11,7 @@ define(['angularAMD', 'uiRouter', 'bootstrapLightbox', 'angularSanitize', 'angul
     ]);
 
     app.run(['$anchorScroll', function ($anchorScroll) {
-        $anchorScroll.yOffset = 60;
+        // $anchorScroll.yOffset = 60;
     }]);
 
     app.config([
@@ -41,14 +41,17 @@ define(['angularAMD', 'uiRouter', 'bootstrapLightbox', 'angularSanitize', 'angul
                     'home': {
                         templateUrl: 'partials/home.html'
                     },
-                    'about': {
-                        templateUrl: 'partials/about.html'
+                    'profile': {
+                        templateUrl: 'partials/profile.html'
+                    },
+                    'employment': {
+                        templateUrl: 'partials/employment.html'
                     },
                     'gallery': {
                         templateUrl: 'partials/gallery.html'
                     },
-                    'childhood': {
-                        templateUrl: 'partials/childhood.html'
+                    'companies': {
+                        templateUrl: 'partials/companies.html'
                     },
                     'footer': {
                         templateUrl: 'partials/footer.html'
@@ -76,10 +79,10 @@ define(['angularAMD', 'uiRouter', 'bootstrapLightbox', 'angularSanitize', 'angul
                 image: 'css/images/ambani_1.png'
             }, {
                 id: 1,
-                image: 'css/images/ambani_2.jpg'
+                image: 'css/images/ambani_1.png'
             }, {
                 id: 2,
-                image: 'css/images/ambani_3.jpg'
+                image: 'css/images/ambani_1.png'
             }]
 
             $scope.timelineImages = [{
@@ -122,46 +125,36 @@ define(['angularAMD', 'uiRouter', 'bootstrapLightbox', 'angularSanitize', 'angul
             }];
 
             $scope.galleryImages = [{
-                'url': 'css/images/thumb_main_1.png',
-                'thumbUrl': 'css/images/thumb_main_1.png',
+                'url': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/19400262_10203462697563897_3262037357523189151_o.jpg?oh=f19bc8c118cb840f6bf04cfe7b823cd2&oe=59CDCF1E',
+                'thumbUrl': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/19400262_10203462697563897_3262037357523189151_o.jpg?oh=f19bc8c118cb840f6bf04cfe7b823cd2&oe=59CDCF1E',
                 'caption': ''
             }, {
-                'url': 'css/images/thumb_main_2.png',
-                'thumbUrl': 'css/images/thumb_main_2.png'
+                'url': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/19221731_1657044671002235_13802316879551189_o.jpg?oh=2207380ba5f80620adee9338113961f2&oe=59CCAE86',
+                'thumbUrl': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/19221731_1657044671002235_13802316879551189_o.jpg?oh=2207380ba5f80620adee9338113961f2&oe=59CCAE86'
             }, {
-                'url': 'css/images/thumb_main_3.png',
-                'thumbUrl': 'css/images/thumb_main_3.png',
+                'url': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t1.0-9/19146045_10203431448742696_2177249613067306637_n.jpg?oh=b25c27347e77242dbfb7b8c28b56daab&oe=59E9355F',
+                'thumbUrl': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t1.0-9/19146045_10203431448742696_2177249613067306637_n.jpg?oh=b25c27347e77242dbfb7b8c28b56daab&oe=59E9355F',
                 'caption': ''
             }, {
-                'url': 'css/images/thumb_main_5.png',
-                'thumbUrl': 'css/images/thumb_main_5.png'
+                'url': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/19055160_10203418850267742_4094927806329081164_o.jpg?oh=db76a600a398fd948c1c37706c29421b&oe=59EA7D15',
+                'thumbUrl': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/19055160_10203418850267742_4094927806329081164_o.jpg?oh=db76a600a398fd948c1c37706c29421b&oe=59EA7D15'
             }, {
-                'url': 'css/images/thumb_main_6.png',
-                'thumbUrl': 'css/images/thumb_main_6.png',
+                'url': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t1.0-9/18920175_10203411330519753_3022884927660727640_n.jpg?oh=d18f1edc735757d910602ae42f18efcb&oe=59D3452F',
+                'thumbUrl': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t1.0-9/18920175_10203411330519753_3022884927660727640_n.jpg?oh=d18f1edc735757d910602ae42f18efcb&oe=59D3452F',
                 'caption': ''
             }, {
-                'url': 'css/images/thumb_main_7.png',
-                'thumbUrl': 'css/images/thumb_main_7.png'
+                'url': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/18921130_10203408744015092_6794833340120573474_o.jpg?oh=adb2d87f7ff1542566f802659d35ec94&oe=59CEEE2F',
+                'thumbUrl': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/18921130_10203408744015092_6794833340120573474_o.jpg?oh=adb2d87f7ff1542566f802659d35ec94&oe=59CEEE2F'
             }, {
-                'url': 'css/images/thumb_main_8.png',
-                'thumbUrl': 'css/images/thumb_main_8.png',
+                'url': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/18953338_10203405953105321_699891125219995713_o.jpg?oh=e5e1fc07bd4895bc6218fb2d268ba0a5&oe=59CEEC6A',
+                'thumbUrl': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/18953338_10203405953105321_699891125219995713_o.jpg?oh=e5e1fc07bd4895bc6218fb2d268ba0a5&oe=59CEEC6A',
                 'caption': ''
             }, {
-                'url': 'css/images/thumb_main_9.png',
-                'thumbUrl': 'css/images/thumb_main_9.png'
+                'url': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/18814540_10203395441482537_2502095319364721193_o.jpg?oh=8834bd2e6a79e75c1fa6615db044232c&oe=59E498C4',
+                'thumbUrl': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/18814540_10203395441482537_2502095319364721193_o.jpg?oh=8834bd2e6a79e75c1fa6615db044232c&oe=59E498C4'
             }, {
-                'url': 'css/images/thumb_main_10.png',
-                'thumbUrl': 'css/images/thumb_main_10.png'
-            }, {
-                'url': 'css/images/thumb_main_11.png',
-                'thumbUrl': 'css/images/thumb_main_11.png',
-                'caption': ''
-            }, {
-                'url': 'css/images/thumb_main_12.png',
-                'thumbUrl': 'css/images/thumb_main_12.png'
-            }, {
-                'url': 'css/images/thumb_main_13.png',
-                'thumbUrl': 'css/images/thumb_main_13.png'
+                'url': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/18814558_10203384646612672_811847553722283589_o.jpg?oh=fc21c2ce7648cba79d0d4710311701f9&oe=59C5221A',
+                'thumbUrl': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/18814558_10203384646612672_811847553722283589_o.jpg?oh=fc21c2ce7648cba79d0d4710311701f9&oe=59C5221A'
             }];
 
             $scope.openLightboxModal = function (imageSection, index) {

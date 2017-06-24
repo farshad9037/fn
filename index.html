@@ -6,66 +6,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="/">
-    <title>Dhirubhai Ambani</title>
+    <title>Faisal Neelambra</title>
 
     <!-- CSS Files [Start] -->
     <link rel="icon" type="image/png" href="css/images/machinser.png">
+    <link href="https://fonts.googleapis.com/css?family=Michroma" rel="stylesheet">
     <link href="js/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="js/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link  href="js/vendors/angular/angular-bootstrap-lightbox.css" rel="stylesheet">
+    <link href="js/vendors/angular/angular-bootstrap-lightbox.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <!-- CSS Files [End] -->
 
 </head>
 
 <body ng-controller="CommonController">
-    <nav id="header" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="col-md-6 col-sm-12 col-xs-12">
-                <a class="page-title navbar-brand" href="#">
-                    <div class="logo-container">
-                        <img class="logo-image" src="css/images/logo.png">
-                        <span><strong>D</strong>hirubhai <strong>A</strong>mbani</span>
-                    </div>
-                </a>
-            </div>
-            <div>
-                <button type="button" style="margin-top: -40px" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-mobile"
-                    aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="col-md-6 col-sm-12 col-xs-12">
-                <div class="collapse navbar-collapse" id="navbar-mobile">
-                    <ul class="nav navbar-nav">
-                        <li ng-click="gotoAnchor('home')"><a>HOME</a></li>
-                        <li ng-click="gotoAnchor('about')"><a>ABOUT</a></li>
-                        <li ng-click="gotoAnchor('childhood')"><a>CHILDHOOD</a></li>
-                        <li ng-click="gotoAnchor('gallery')"><a>GALLERY</a></li>
-                        <li ng-click="gotoAnchor('career')"><a>CAREER</a></li>
-                        <li ng-click="gotoAnchor('works')"><a>WORKS</a></li>
+    <div class="site-wrapper">
+        <div id="topbar" style="display: none">
+            <div class="container">
+                <div class="pull-left">
+                    Call me +971 2 1234567
+                </div>
+                <div class="pull-right">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                     </ul>
                 </div>
             </div>
         </div>
-    </nav>
+        <div class="clearfix"></div>
 
-    <div id="home" ui-view="home"></div>
-    <div ui-view="about"></div>
-    <div ui-view="childhood"></div>
-    <div ui-view="gallery"></div>
+        <nav id="header" class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" data-toggle="collapse" data-target="#navbar-mobile" class="navbar-toggle collapsed" aria-expanded="false"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                    <!--<a href="index.html" class="navbar-brand">-->
+                    <!--<img src="css/images/logo.png" alt="">-->
+                    <div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/2000px-NYCS-bull-trans-F.svg.png"
+                            style="width: 50px; margin-right: 10px; margin-bottom: 5px">Faisal Neelambra</div>
+                    <!--</a>    -->
+                </div>
+                <div class="collapse pull-right navbar-collapse" id="navbar-mobile">
+                    <ul class="nav navbar-nav">
+                        <li ng-click="gotoAnchor('home')"><a>Home</a></li>
+                        <li ng-click="gotoAnchor('profile')"><a>Profile</a></li>
+                        <li ng-click="gotoAnchor('employment')"><a>Employment</a></li>
+                        <li ng-click="gotoAnchor('gallery')"><a>Photo Gallery</a></li>
+                        <li ng-click="gotoAnchor('companies')"><a>Group Companies</a></li>
+                        <li ng-click="gotoAnchor('works')"><a>Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-    <!--<footer id="footer" class="clearfix">
+
+        <div ui-view="home"></div>
+        <div ui-view="profile"></div>
+        <div ui-view="employment"></div>
+        <div ui-view="childhood"></div>
+        <div ui-view="gallery"></div>
+        <div ui-view="companies"></div>
         <div ui-view="footer"></div>
-    </footer>-->
 
-    <!-- JS Files [Start]-->
-    <script src="js/vendors/require/require.js" data-main="js/main.js"></script>
-    <!--<script src="vendors/bootstrap/js/bootstrap.min.js"></script>-->
-    <!-- JS Files [End]-->
+        <!-- JS Files [Start]-->
+        <script src="js/vendors/require/require.js" data-main="js/main.js"></script>
+        <!--<script src="vendors/bootstrap/js/bootstrap.min.js"></script>-->
+        <!-- JS Files [End]-->
+    </div>
 </body>
 
 </html>

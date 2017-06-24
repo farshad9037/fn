@@ -1,13 +1,19 @@
-<div id="gallery" class="clearfix col-md-12 col-sm-12 col-xs-12" style="padding: 15px;">
-    <div class="text-center">
-        <h2 style="color: #ffffff; font-weight: 700; margin-top: 0; margin-bottom: 15px;">IMAGE GALLERY</h2>
-    </div>
-    <div class="row">
-        <div class="col-md-3 col-sm-3 col-xs-6" ng-repeat="image in galleryImages">
-            <div class="thumbs-container" ng-click="openLightboxModal('gallery', $index)">
-                <div class="thumbs-image-container">
-                <img ng-src="{{image.thumbUrl}}">
+<section id="gallery" class="sec-padding">
+    <div class="container">
+        <div class="row">
+            <h3 class="section-title-5 michroma uppercase less-mar2 text-center">PHOTO GALLERY</h3>
+            <div class="title-line-5"><img src="css/images/about-bottom.png" alt=""></div>
+            <div class="clearfix"></div>
+            <br>
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-6" ng-repeat="image in galleryImages">
+                    <div class="thumbs-container" ng-click="openLightboxModal('gallery', $index)">
+                        <div class="thumbs-image-container">
+                            <img ng-src="{{image.thumbUrl}}" class="img-responsive">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
