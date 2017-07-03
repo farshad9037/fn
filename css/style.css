@@ -1,20 +1,3 @@
-
-@font-face {
-    font-family: 'brandon-grotesque'; /*a name to be used later*/
-    src: url('fonts/Brandon-Grotesque/Brandon_reg.otf'); /*URL to font*/
-}
-@font-face {
-    font-family: 'brandon-grotesque-bold'; /*a name to be used later*/
-    src: url('fonts/Brandon-Grotesque/Brandon_bld.otf'); /*URL to font*/
-}
-@font-face {
-    font-family: 'brandon-grotesque-extra-bold'; /*a name to be used later*/
-    src: url('fonts/Brandon-Grotesque/Brandon_blk.otf'); /*URL to font*/
-}
-@font-face {
-    font-family: 'brandon-grotesque-thin'; /*a name to be used later*/
-    src: url('fonts/Brandon-Grotesque/Brandon_thin.otf'); /*URL to font*/
-}
 body {
     font: 14px 'Open Sans', sans-serif;
     font-weight: normal;
@@ -24,16 +7,30 @@ body {
     position: relative;
 }
 
+#home {
+    background-color: #f3f7f9;
+    margin-top: 80px;
+}
+
+#home h2 {
+    font-size: 40px;
+    color: #727272;
+    font-weight: 100;
+    line-height: 1.3;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.56);
+    top: 20%;
+    left: 20%;
+}
+
+#home p {
+    font-size: 16px;
+    color: #FFF;
+    padding: 10px 20px;
+}
+
 .site-wrapper {
     width: 100%;
     margin: 0 auto 0 auto;
-}
-
-#topbar {
-    background-color: #fd602c;
-    height: 45px;
-    line-height: 45px;
-    color: white;
 }
 
 ul {
@@ -42,29 +39,30 @@ ul {
     list-style: none;
 }
 
-#topbar li {
-    float: left;
-    text-align: right;
-    font-size: 14px;
-    margin: 0px;
-    padding: 0 10px 0 10px;
+.absolute {
+    position: absolute;
 }
 
-#topbar li a {
-    color: white;
+.relative {
+    position: relative;
+}
+
+.vertical-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #header {
     height: 80px;
-    background: #fff;
+    background: #f3f7f9;
     padding: 0;
     width: 100%;
     z-index: 999;
 }
 
 .navbar-default {
-    border-color: #e7e7e7;
-    border: none;
+    border-color: #f3f7f9;
 }
 
 .navbar {
@@ -86,15 +84,24 @@ ul {
     padding: 21px 0 0;
 }
 
+#loader {
+    width: 200px;
+    height: 200px;
+    -webkit-animation: spin 10s linear infinite;
+    -moz-animation: spin 10s linear infinite;
+    animation: spin 10s linear infinite;
+}
+
 .navbar-nav > li > a {
     padding-bottom: 30px;
     padding-top: 30px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
-#header .nav li:hover a, #header .nav li.active a {
+#header .nav li:hover a, #header .nav li a.active {
     color: #fd602c;
-    /*border-bottom: 3px solid #fd602c;*/
+    border-bottom: 3px solid #fd602c;
 }
 
 .logo-image {
@@ -177,7 +184,7 @@ h3.less-mar2 {
 }
 
 .section-light {
-    background-color: #f6f6f6;
+    background-color: #f3f7f9;
 }
 
 .text-box.padding-3 {
@@ -219,17 +226,23 @@ h3.less-mar2 {
     float: left;
     margin-top: 30px;
 }
+
+.explore-button {
+    padding: 10px;
+    background-color: #fd602c;
+    border: 1px solid #fd602c;
+    color: white
+}
 /*about [End]*/
 .mask {
     position: absolute;
-    top: 0;
+    top: -80px;
     left: 0;
     bottom: 0;
     display: block;
-    z-index: 4;
+    z-index: 99999999;
     width: 100%;
-    background: #000;
-    opacity: .3;
+    background: #fff;
 }
 
 .image-caption {

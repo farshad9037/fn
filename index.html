@@ -20,24 +20,10 @@
 </head>
 
 <body ng-controller="CommonController">
+    <div class="mask text-center" ng-hide="isDomLoaded">
+        <h2>Loading...</h2>
+    </div>
     <div class="site-wrapper">
-        <div id="topbar" style="display: none">
-            <div class="container">
-                <div class="pull-left">
-                    Call me +971 2 1234567
-                </div>
-                <div class="pull-right">
-                    <ul>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="clearfix"></div>
-
         <nav id="header" class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -50,12 +36,16 @@
                 </div>
                 <div class="collapse pull-right navbar-collapse" id="navbar-mobile">
                     <ul class="nav navbar-nav">
-                        <li ng-click="gotoAnchor('home')"><a>Home</a></li>
-                        <li ng-click="gotoAnchor('profile')"><a>Profile</a></li>
-                        <li ng-click="gotoAnchor('employment')"><a>Employment</a></li>
-                        <li ng-click="gotoAnchor('gallery')"><a>Photo Gallery</a></li>
-                        <li ng-click="gotoAnchor('companies')"><a>Group Companies</a></li>
-                        <li ng-click="gotoAnchor('works')"><a>Contact</a></li>
+                        <li ng-click="gotoAnchor('home')">
+                            <a ui-sref="home" ui-sref-active="active">Home</a>
+                        </li>
+                        <li ng-click="goToState('home', 'profile')">
+                            <a>Profile</a>
+                        </li>
+                        <li ng-click="goToState('home', 'employment')"><a>Employment</a></li>
+                        <li><a ui-sref="gallery" ui-sref-active="active">Photo Gallery</a></li>
+                        <li ng-click="goToState('home', 'companies')"><a>Group Companies</a></li>
+                        <li ng-click="goToState('home', 'footer')"><a>Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -68,7 +58,53 @@
         <div ui-view="childhood"></div>
         <div ui-view="gallery"></div>
         <div ui-view="companies"></div>
-        <div ui-view="footer"></div>
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-sm-6">
+                        <h5>Connect</h5>
+                        <ul class="connect">
+                            <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fa fa-wikipedia-w"></i></a></li>
+                        </ul>
+
+                        <div class="clearfix"></div>
+                        <div class="copyright">
+                            <p>© Copyright 2017 by FaisalNeelambra.com. All rights reserved. </p>
+                            <!--<p><a href="#"> Privacy Policy - Terms and Conditions </a>  </p>-->
+                            <p> Website developed by <a href="http://machinser.com/" target="_blank"> Machinser Technologies</a>                                </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <h5>useful links</h5>
+                        <ul class="usefulLinks">
+                            <li ng-click="gotoAnchor('home')"><a>Home</a></li>
+                            <li ng-click="gotoAnchor('profile')"><a>Profile</a></li>
+                            <li ng-click="gotoAnchor('employment')"><a>Employment</a></li>
+                            <li ng-click="gotoAnchor('gallery')"><a>Photo Gallery</a></li>
+                            <li ng-click="gotoAnchor('career')"><a>Group Companies</a></li>
+                            <li ng-click="gotoAnchor('works')"><a>Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 hidden-xs">
+                        <h5>Quick Contact</h5>
+                        <ul class="contact">
+                            <li>Luxuria, G Floor,</li>
+                            <li>Sahara Centre, Al Nahda Street,</li>
+                            <li>Sharjah, UAE</li>
+                            <li>Tel (Office) : +971 50 3476 100</li>
+                            <li>Direct : +971 50 3476 100</li>
+                            <li>E-mail : <a href="#">faisal@neelambra.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
         <!-- JS Files [Start]-->
         <script src="js/vendors/require/require.js" data-main="js/main.js"></script>

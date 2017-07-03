@@ -11,8 +11,8 @@ define(['angularAMD'], function (angularAMD) {
 
                 _setHeight = function () {
                     element.css({
-                        height: $window.innerHeight - adjustment,
-                        transition: 'height 1s ease-out'
+                        maxHeight: $window.innerHeight - adjustment,
+                        transition: 'max-height 1s ease-out'
                     });
                 };
                 _setHeight();

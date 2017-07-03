@@ -1,24 +1,13 @@
-<!--<div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-    <div class="mask"></div>
-    <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-        <img ng-src="{{slide.image}}">
+<section id="home" class="relative">
+    <div class="absolute" style="top: 30%; left: 8%; z-index: 1">
+        <h2>"Entrepreneur, Philanthropist"</h2>
     </div>
-    <div class="image-caption">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <h2>"I trust myself to make the best decision for me"</h2>
-                    <p class="font-size-15px">- Faisal Neelambra</p>
-                </div>
-            </div>
+    <div class="absolute" style="top: 70%; left: 20%; z-index: 1;">
+        <button type="button" ng-click="gotoAnchor('profile')" class="explore-button">EXPLORE</button>
+    </div>
+    <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+        <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+            <img ng-src="{{slide.image}}" class="img-responsive pull-right">
         </div>
-        <div class="dropArrow"><i class="fa fa-angle-double-down bounce"></i></div>
     </div>
-</div>-->
-<div class="clearfix text-center" style="background: url(css/images/main_pic_2.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;" >
-    <img style="max-width:100%;" src="css/images/main_pic_2.jpg" set-viewport-height adjustment="225">
-</div>
+</section>
