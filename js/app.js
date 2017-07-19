@@ -41,14 +41,8 @@ define(['angularAMD', 'uiRouter', 'bootstrapLightbox', 'angularSanitize', 'angul
                     'home': {
                         templateUrl: 'partials/home.html'
                     },
-                    'profile': {
-                        templateUrl: 'partials/profile.html'
-                    },
                     'employment': {
                         templateUrl: 'partials/employment.html'
-                    },
-                    'companies': {
-                        templateUrl: 'partials/companies.html'
                     }
                 }
             })
@@ -60,11 +54,28 @@ define(['angularAMD', 'uiRouter', 'bootstrapLightbox', 'angularSanitize', 'angul
                     }
                 }
             })
-        $locationProvider.html5Mode(true);
+            .state('profile', {
+                url: "/profile",
+                views: {
+                    'profile': {
+                        templateUrl: 'partials/profile.html'
+                    }
+                }
+            })
+            .state('companies', {
+                url: "/companies",
+                views: {
+                    'profile': {
+                        templateUrl: 'partials/companies.html'
+                    }
+                }
+            });
+        // $locationProvider.html5Mode(true);
     });
 
-    app.config(['$qProvider', function ($qProvider) {
+    app.config(['$qProvider', 'LightboxProvider', function ($qProvider, LightboxProvider) {
         $qProvider.errorOnUnhandledRejections(false);
+        LightboxProvider.templateUrl = 'partials/gallery-modal.html';
     }]);
 
     app.controller('CommonController', ['$anchorScroll', '$location', '$scope', 'Lightbox', '$state', '$timeout',
@@ -92,72 +103,153 @@ define(['angularAMD', 'uiRouter', 'bootstrapLightbox', 'angularSanitize', 'angul
             $scope.active = 0;
             $scope.slides = [{
                 id: 0,
-                image: 'css/images/cover-image.png',
+                image: 'css/images/cover-image-full.jpg',
                 heading: '\"Entrepreneur, Philanthropist\"'
             }]
 
             $scope.galleryImages = [{
-                'url': 'https://mail.google.com/mail/u/0/?ui=2&ik=2df0956b6b&view=fimg&th=15cd168219e20919&attid=0.2&disp=inline&safe=1&attbid=ANGjdJ8VyABOzVG4GOJNMeNY1fMINK0MWH_-N4sQrA9qxnRPJkPzHb9c0X2F6amGdqsYg3ICgGZj8J3-rhN2vK_awpkwF4LQns49h7o2yY2GUKWKS22sTnyUuUnkZ3Q&ats=1499028070827&rm=15cd168219e20919&zw&sz=w1440-h800',
-                'thumbUrl': 'https://mail.google.com/mail/u/0/?ui=2&ik=2df0956b6b&view=fimg&th=15cd168219e20919&attid=0.2&disp=inline&safe=1&attbid=ANGjdJ8VyABOzVG4GOJNMeNY1fMINK0MWH_-N4sQrA9qxnRPJkPzHb9c0X2F6amGdqsYg3ICgGZj8J3-rhN2vK_awpkwF4LQns49h7o2yY2GUKWKS22sTnyUuUnkZ3Q&ats=1499028070827&rm=15cd168219e20919&zw&sz=w1440-h800',
+                'url': 'css/images/gallery-1.png',
+                'thumbUrl': 'css/images/gallery-1-thumb.png',
+                'caption': 'Gifting Mr.Backer Trichur\'s \'DOT ART\' to MOHAMMED BIN HAMAD BIN MOHAMMED AL SHARQI, CROWN PRINCE OF FUJAIRAH, UAE. It was an auspicious moment passing through in my life in the gulf soil, gifting "Dot Art" of HH HAMAD BIN MOHAMMED AL SHARQI.\
+                In the presence of Mr. Faisal AK, Corporate Executive Director Malabar Gold & Co Chairman - COSMOS Sports Intl, Mr. Aak Muhammed Musthafa, MD - AAK Group Of companies, Mr. Muhammad Salikunjo, Director - Malabar Gold & KIMS Hospital, Mr.Muhasin Wandoor, Director - Orange Events Intl, Mr.Backer Trichur - Oracle & Virtuoso dot painting Artist.'
+            }, {
+                'url': 'css/images/gallery-2.png',
+                'thumbUrl': 'css/images/gallery-2-thumb.png',
+                'caption': 'MOHAMMED BIN HAMAD BIN MOHAMMED AL SHARQI, CROWN PRINCE OF FUJAIRAH, UAE'
+            }, {
+                'url': 'css/images/gallery-3.png',
+                'thumbUrl': 'css/images/gallery-3-thumb.png',
+                'caption': 'Masha\'Allah, \“Love your family. Spend time, tomorrow is not promised & today is short.”'
+            }, {
+                'url': 'css/images/gallery-4.png',
+                'thumbUrl': 'css/images/gallery-4-thumb.png',
+                'caption': 'With Irfan Pathan - Brand ambassador, Address fashion'
+            }, {
+                'url': 'css/images/gallery-5.png',
+                'thumbUrl': 'css/images/gallery-5.png',
+                'caption': 'With Dignitaries ( DWTC ) RAMADAN SUHOUR at Dubai World Trade Centre (7/06/2017 )'
+            }, {
+                'url': 'css/images/gallery-6.png',
+                'thumbUrl': 'css/images/gallery-6.png',
+                'caption': 'Universal Hospital Iftar at Etihad Towers, Abu Dhabi, United Arab Emirates'
+            }, {
+                'url': 'css/images/gallery-7.png',
+                'thumbUrl': 'css/images/gallery-7.png',
+                'caption': 'With Mr. HAMAD ABDULLA EISA BUSHAB AL SUWAIDI, Mr. NAZAR ABDULLA EISA BUSHAB AL SUWAIDI, Mr.Faisal AK - Executive Director,Malabar Gold & Diamonds & Hadi Muhammed Faisal '
+            }, {
+                'url': 'css/images/gallery-8.png',
+                'thumbUrl': 'css/images/gallery-8.png',
+                'caption': 'Indelible Moment at HH Fujairah Palace with Eminent Entrepreneur #DrBRShetty (Executive Chairman NMC Healthcare and Chairman of UAE Exchange),Mr. Faisal AK ,( Corporate Executive Director , Malabar Gold) Mr. Aak Muhammed Musthafa ( MD AAK Group of companies ), Mr. Muhammad Salikunjo ( Director Malbar Gold & Kims Hospital ) , and an oracle & virtuoso dot painting artist Mr.Backer Trichur'
+            }, {
+                'url': 'css/images/gallery-9.png',
+                'thumbUrl': 'css/images/gallery-9.png',
+                'caption': 'On behalf of Orange Events, promulgates brochure of Orange Events from Inducement Tycoon Mr. A.K.Faisal (Corporate Executive Director, Malabar Gold & Diamonds ) to the young and Impetus Mogul Mr. Mehroof Manalody, Chairman & MD G-Tec Education)held at Dubai on 13th of June , in presence with Mr.Faisal Neelambra, MD-Luxuria Watches& D\'Sign Interiors ) Mr.Rejy Narein Rajeesh ( Creative Head -Orange Events) , Mr.Jaya Kumar ( Business Designer and Entrepreneur , Florris Group, Habbebi Documents, IMA IT solution & Orange Events ), Muhasin Babu ( Director Marketing -Orange Events ) & Shafeek Vahab ( Director Program- Orange Events )'
+            }, {
+                'url': 'css/images/gallery-10.png',
+                'thumbUrl': 'css/images/gallery-10.png'
+            }, {
+                'url': 'css/images/gallery-11.png',
+                'thumbUrl': 'css/images/gallery-11.png'
+            }, {
+                'url': 'css/images/gallery-12.png',
+                'thumbUrl': 'css/images/gallery-12.png',
                 'caption': ''
             }, {
-                'url': 'https://mail.google.com/mail/u/0/?ui=2&ik=2df0956b6b&view=fimg&th=15cd168219e20919&attid=0.3&disp=inline&safe=1&attbid=ANGjdJ_3qo7INy_Yy5ollKOz-5bvXIeC_8tyeLkL72ioDtwp78cT474gCTK0uzanm9NrjyLXOlawT209Y53aYi1b-3HUkKMmcHfcwQn4acXNHe2DpDLHH7iOyN-MO_A&ats=1499028070827&rm=15cd168219e20919&zw&sz=w1440-h800',
-                'thumbUrl': 'https://mail.google.com/mail/u/0/?ui=2&ik=2df0956b6b&view=fimg&th=15cd168219e20919&attid=0.3&disp=inline&safe=1&attbid=ANGjdJ_3qo7INy_Yy5ollKOz-5bvXIeC_8tyeLkL72ioDtwp78cT474gCTK0uzanm9NrjyLXOlawT209Y53aYi1b-3HUkKMmcHfcwQn4acXNHe2DpDLHH7iOyN-MO_A&ats=1499028070827&rm=15cd168219e20919&zw&sz=w1440-h800'
+                'url': 'css/images/gallery-13.png',
+                'thumbUrl': 'css/images/gallery-13.png'
             }, {
-                'url': 'https://mail.google.com/mail/u/0/?ui=2&ik=2df0956b6b&view=fimg&th=15cd168219e20919&attid=0.1&disp=inline&safe=1&attbid=ANGjdJ9gKBNi2LtGmDbATMFT76bhHpBycgymwiQ5TiICgxXrkHNt54G9qq3SXyrP4G9OTEvTMeeE86f9igdu4CG2TRNhpFrDZGnt3VcLZczW-7KENo9VBqF4yGeKkuk&ats=1499028070827&rm=15cd168219e20919&zw&sz=w1440-h800',
-                'thumbUrl': 'https://mail.google.com/mail/u/0/?ui=2&ik=2df0956b6b&view=fimg&th=15cd168219e20919&attid=0.1&disp=inline&safe=1&attbid=ANGjdJ9gKBNi2LtGmDbATMFT76bhHpBycgymwiQ5TiICgxXrkHNt54G9qq3SXyrP4G9OTEvTMeeE86f9igdu4CG2TRNhpFrDZGnt3VcLZczW-7KENo9VBqF4yGeKkuk&ats=1499028070827&rm=15cd168219e20919&zw&sz=w1440-h800',
-                'caption': ''
+                'url': 'css/images/gallery-14.png',
+                'thumbUrl': 'css/images/gallery-14.png'
             }, {
-                'url': 'https://lh6.googleusercontent.com/tTIh_XQteyloeH5ogZ5PUbPT9mdVa5oP3GBJCRI32YgbtAAMG-9at-94OjYOUPXGR3UKwKVflPy3vd0=w1440-h800-rw',
-                'thumbUrl': 'https://lh6.googleusercontent.com/tTIh_XQteyloeH5ogZ5PUbPT9mdVa5oP3GBJCRI32YgbtAAMG-9at-94OjYOUPXGR3UKwKVflPy3vd0=w1440-h800-rw'
+                'url': 'css/images/gallery-15.png',
+                'thumbUrl': 'css/images/gallery-15.png'
+            }];
+
+            $scope.employmentImages = [{
+                position: 'MANAGING DIRECTOR',
+                url: 'css/images/luxuria.png',
+                thumbUrl: 'css/images/luxuria.png',
+                caption: 'The Luxuria retail brand was born in 2014, and has grown to 5 Retail Store Locations in high traffic value destinations in unite Arab Emirates and a well curated website that supports direct Consumer communication. Luxuria offers classic watches for men, elegant gold and silver watches for women, where each watch is a paragon of quality and precision engineering.',
+                details: {
+                    name: 'Luxuria',
+                    place: 'Abu Dhabi',
+                },
+                description: [{
+                    section: 'Retail',
+                    points: [
+                        'KM Trading Group',
+                        'Address Men\'s Fashion',
+                        'Cosmo Sports',
+                        'Alquoz Macine Group',
+                        'Spinneys Group'
+                    ]
+                }, {
+                    section: 'Corporate Sales',
+                    points: [
+                        'Branded Watches',
+                        'Branded Perfumes',
+                        'Branded Accessories'
+                    ]
+                }]
             }, {
-                'url': 'https://lh4.googleusercontent.com/5a9qfi-quGTLglWDM0CTwDapH7qntUwZStw4Gkg-7h1qbrGf-xy27tgtDzaAHw8JdFz_XeCWgm5IbOk=w1440-h800-rw',
-                'thumbUrl': 'https://lh4.googleusercontent.com/5a9qfi-quGTLglWDM0CTwDapH7qntUwZStw4Gkg-7h1qbrGf-xy27tgtDzaAHw8JdFz_XeCWgm5IbOk=w1440-h800-rw',
-                'caption': ''
+                position: 'MANAGING DIRECTOR',
+                url: 'css/images/d-sign.jpg',
+                thumbUrl: 'css/images/d-sign.jpg',
+                caption: '',
+                details: {
+                    name: 'D\'SIGN INTERIOR',
+                    place: 'Fujairah',
+                },
+                description: [{
+                    section: 'Home',
+                    points: [
+                        'Bedroom Furniture Arrangement',
+                        'Bedroom Colours',
+                        'Flooring',
+                        'Lighting'
+                    ]
+                }, {
+                    section: 'Office',
+                    points: [
+                        'Traditional Workspace',
+                        'Classy Office',
+                        'Efficient Floor',
+                        'Progressiv Firm'
+                    ]
+                }]
             }, {
-                'url': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/18921130_10203408744015092_6794833340120573474_o.jpg?oh=adb2d87f7ff1542566f802659d35ec94&oe=59CEEE2F',
-                'thumbUrl': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/18921130_10203408744015092_6794833340120573474_o.jpg?oh=adb2d87f7ff1542566f802659d35ec94&oe=59CEEE2F'
-            }, {
-                'url': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/18953338_10203405953105321_699891125219995713_o.jpg?oh=e5e1fc07bd4895bc6218fb2d268ba0a5&oe=59CEEC6A',
-                'thumbUrl': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/18953338_10203405953105321_699891125219995713_o.jpg?oh=e5e1fc07bd4895bc6218fb2d268ba0a5&oe=59CEEC6A',
-                'caption': ''
-            }, {
-                'url': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/18814540_10203395441482537_2502095319364721193_o.jpg?oh=8834bd2e6a79e75c1fa6615db044232c&oe=59E498C4',
-                'thumbUrl': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/18814540_10203395441482537_2502095319364721193_o.jpg?oh=8834bd2e6a79e75c1fa6615db044232c&oe=59E498C4'
-            }, {
-                'url': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/18814558_10203384646612672_811847553722283589_o.jpg?oh=fc21c2ce7648cba79d0d4710311701f9&oe=59C5221A',
-                'thumbUrl': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/18814558_10203384646612672_811847553722283589_o.jpg?oh=fc21c2ce7648cba79d0d4710311701f9&oe=59C5221A'
-            }, {
-                'url': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/19400262_10203462697563897_3262037357523189151_o.jpg?oh=f19bc8c118cb840f6bf04cfe7b823cd2&oe=59CDCF1E',
-                'thumbUrl': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/19400262_10203462697563897_3262037357523189151_o.jpg?oh=f19bc8c118cb840f6bf04cfe7b823cd2&oe=59CDCF1E',
-                'caption': ''
-            }, {
-                'url': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/19221731_1657044671002235_13802316879551189_o.jpg?oh=2207380ba5f80620adee9338113961f2&oe=59CCAE86',
-                'thumbUrl': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/19221731_1657044671002235_13802316879551189_o.jpg?oh=2207380ba5f80620adee9338113961f2&oe=59CCAE86'
-            }, {
-                'url': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t1.0-9/19146045_10203431448742696_2177249613067306637_n.jpg?oh=b25c27347e77242dbfb7b8c28b56daab&oe=59E9355F',
-                'thumbUrl': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t1.0-9/19146045_10203431448742696_2177249613067306637_n.jpg?oh=b25c27347e77242dbfb7b8c28b56daab&oe=59E9355F',
-                'caption': ''
-            }, {
-                'url': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/19055160_10203418850267742_4094927806329081164_o.jpg?oh=db76a600a398fd948c1c37706c29421b&oe=59EA7D15',
-                'thumbUrl': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/19055160_10203418850267742_4094927806329081164_o.jpg?oh=db76a600a398fd948c1c37706c29421b&oe=59EA7D15'
-            }, {
-                'url': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t1.0-9/18920175_10203411330519753_3022884927660727640_n.jpg?oh=d18f1edc735757d910602ae42f18efcb&oe=59D3452F',
-                'thumbUrl': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t1.0-9/18920175_10203411330519753_3022884927660727640_n.jpg?oh=d18f1edc735757d910602ae42f18efcb&oe=59D3452F',
-                'caption': ''
-            }, {
-                'url': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/18921130_10203408744015092_6794833340120573474_o.jpg?oh=adb2d87f7ff1542566f802659d35ec94&oe=59CEEE2F',
-                'thumbUrl': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/18921130_10203408744015092_6794833340120573474_o.jpg?oh=adb2d87f7ff1542566f802659d35ec94&oe=59CEEE2F'
-            }, {
-                'url': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/18953338_10203405953105321_699891125219995713_o.jpg?oh=e5e1fc07bd4895bc6218fb2d268ba0a5&oe=59CEEC6A',
-                'thumbUrl': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/18953338_10203405953105321_699891125219995713_o.jpg?oh=e5e1fc07bd4895bc6218fb2d268ba0a5&oe=59CEEC6A',
-                'caption': ''
-            }, {
-                'url': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/18814540_10203395441482537_2502095319364721193_o.jpg?oh=8834bd2e6a79e75c1fa6615db044232c&oe=59E498C4',
-                'thumbUrl': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/18814540_10203395441482537_2502095319364721193_o.jpg?oh=8834bd2e6a79e75c1fa6615db044232c&oe=59E498C4'
-            }, {
-                'url': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/18814558_10203384646612672_811847553722283589_o.jpg?oh=fc21c2ce7648cba79d0d4710311701f9&oe=59C5221A',
-                'thumbUrl': 'https://scontent.fblr1-1.fna.fbcdn.net/v/t31.0-8/18814558_10203384646612672_811847553722283589_o.jpg?oh=fc21c2ce7648cba79d0d4710311701f9&oe=59C5221A'
+                position: 'MANAGING PARTNER',
+                url: 'css/images/amigos.png',
+                thumbUrl: 'css/images/amigos.png',
+                details: {
+                    name: 'Amigos Exhibition LLC',
+                    place: 'Dubai',
+                },
+                description: [{
+                    section: 'Designing',
+                    points: [
+                        'Exhibition Stand Design',
+                        'Exhibition Booth Design',
+                        'Kiosk Design',
+                        'Modular Stand Design'
+                    ]
+                }, {
+                    section: 'Printing',
+                    points: [
+                        'Indoor Digital Printing',
+                        'Outdoor Digital Printing',
+                        'Trade Show Branding',
+                        'Exhibition Giveaways'
+                    ]
+                }, {
+                    section: 'Exhibition',
+                    points: [
+                        'Exhibition Stand Build Up',
+                        'Stand Fabrication',
+                        'Trades Show Displays',
+                        'Furniture on Rentals'
+                    ]
+                }]
             }];
 
             $scope.openLightboxModal = function (imageSection, index) {
@@ -165,8 +257,8 @@ define(['angularAMD', 'uiRouter', 'bootstrapLightbox', 'angularSanitize', 'angul
                     case 'gallery':
                         Lightbox.openModal($scope.galleryImages, index);
                         break;
-                    case 'timeline':
-                        Lightbox.openModal($scope.timelineImages, index);
+                    case 'employment':
+                        Lightbox.openModal($scope.employmentImages, index);
                         break;
                 }
             };

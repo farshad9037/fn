@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <base href="/">
+    <!--<base href="/">-->
     <title>Faisal Neelambra</title>
 
     <!-- CSS Files [Start] -->
@@ -30,21 +30,21 @@
                     <button type="button" data-toggle="collapse" data-target="#navbar-mobile" class="navbar-toggle collapsed" aria-expanded="false"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
                     <!--<a href="index.html" class="navbar-brand">-->
                     <!--<img src="css/images/logo.png" alt="">-->
-                    <div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/NYCS-bull-trans-F.svg/2000px-NYCS-bull-trans-F.svg.png"
-                            style="width: 50px; margin-right: 10px; margin-bottom: 5px">Faisal Neelambra</div>
+                    <div style="padding-left: 10px; font-size: 0.8em;" class="text-center">
+                        <img src="css/images/logo.png" style="width: 50px; margin-bottom: 5px">Faisal Neelambra</div>
                     <!--</a>    -->
                 </div>
-                <div class="collapse pull-right navbar-collapse" id="navbar-mobile">
+                <div class="collapse navbar-collapse" id="navbar-mobile">
                     <ul class="nav navbar-nav">
                         <li ng-click="gotoAnchor('home')">
                             <a ui-sref="home" ui-sref-active="active">Home</a>
                         </li>
-                        <li ng-click="goToState('home', 'profile')">
-                            <a>Profile</a>
+                        <li>
+                            <a ui-sref="profile" ui-sref-active="active">Profile</a>
                         </li>
                         <li ng-click="goToState('home', 'employment')"><a>Employment</a></li>
                         <li><a ui-sref="gallery" ui-sref-active="active">Photo Gallery</a></li>
-                        <li ng-click="goToState('home', 'companies')"><a>Group Companies</a></li>
+                        <li ui-sref="companies" ui-sref-active="active"><a>Group Companies</a></li>
                         <li ng-click="goToState('home', 'footer')"><a>Contact</a></li>
                     </ul>
                 </div>
@@ -75,7 +75,7 @@
                         <div class="copyright">
                             <p>© Copyright 2017 by FaisalNeelambra.com. All rights reserved. </p>
                             <!--<p><a href="#"> Privacy Policy - Terms and Conditions </a>  </p>-->
-                            <p> Website developed by <a href="http://machinser.com/" target="_blank"> Machinser Technologies</a>                                </p>
+                            <p> Website developed by <a style="color: white" href="http://machinser.com/" target="_blank"> Machinser</a></p>
                         </div>
                     </div>
 

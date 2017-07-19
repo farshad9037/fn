@@ -1,15 +1,16 @@
-<section id="gallery" class="sec-padding">
+<section id="gallery" class="par-padding">
     <div class="container">
         <div class="row">
             <h3 class="section-title-5 michroma uppercase less-mar2 text-center">PHOTO GALLERY</h3>
             <div class="title-line-5"><img src="css/images/about-bottom.png" alt=""></div>
             <div class="clearfix"></div>
             <br>
-            <div class="row">
-                <div class="col-md-4 col-sm-4 col-xs-6" ng-repeat="image in galleryImages">
-                    <div class="thumbs-container" ng-click="openLightboxModal('gallery', $index)">
-                        <div class="thumbs-image-container">
-                            <img ng-src="{{image.thumbUrl}}" class="img-responsive">
+            <div class="col-md-4 col-sm-12 col-xs-12" ng-repeat="image in galleryImages">
+                <div class="thumbs-container" ng-click="openLightboxModal('gallery', $index)">
+                    <div class="relative thumbs-image-container">
+                        <img ng-src="{{image.thumbUrl}}" class="img-responsive">
+                        <div class="thumbs-image-caption text-center">
+                            <p>{{image.caption}}</p>
                         </div>
                     </div>
                 </div>

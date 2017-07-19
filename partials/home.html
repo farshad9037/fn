@@ -1,13 +1,61 @@
 <section id="home" class="relative">
-    <div class="absolute" style="top: 30%; left: 8%; z-index: 1">
-        <h2>"Entrepreneur, Philanthropist"</h2>
-    </div>
-    <div class="absolute" style="top: 70%; left: 20%; z-index: 1;">
-        <button type="button" ng-click="gotoAnchor('profile')" class="explore-button">EXPLORE</button>
-    </div>
     <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
         <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-            <img ng-src="{{slide.image}}" class="img-responsive pull-right">
+            <img ng-src="{{slide.image}}" class="img-responsive" ng-click="gotoAnchor('profile')">
+        </div>
+    </div>
+</section>
+<section id="profile" class="clearfix sec-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12 bmargin">
+                <h3 class="less-mar2">Mr. Faisal Neelambra</h3>
+                <div class="col-md-12 text-left nopadding"><img src="" alt=""></div>
+                <div class="clearfix"></div>
+                <br>
+                <p>Managing Director of <strong>Luxuria</strong>, one of the best retail brand which has grown to a chain of
+                    retail stores locating across the popular destinations in UAE. His business chain includes
+                    <strong>D'SIGN INTERIORS</strong> and <strong>Amigos Exhibhitions LLC.</strong></p>
+                <br>
+                <ul class="personal-info">
+                    <li> <i class="fa fa-calendar"></i> Birthdate : 05/05/1982</li>
+                    <li> <i class="fa fa-phone"></i> Phone : +971 50 3476 100 </li>
+                    <li> <i class="fa fa-envelope"></i> Email : faisal@neelambra.com</li>
+                    <li> <i class="fa fa-globe"></i> Website : faisalneelambra.com</li>
+                </ul>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 bmargin" style="max-height: 350px; overflow: hidden">
+                <img src="css/images/profile-pic.png" alt="" class="img-responsive">
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="clearfix"></div>
+            <div ng-repeat="employment in employmentImages" ng-click="openLightboxModal('employment', $index)" class="col-12 col-md-6 col-lg-4">
+                <div class="box section-light">
+                    <h4 class="text-center" style="font-weight: bold">
+                        <span>MANAGING</span>
+                        <span ng-if="employment.position === 'MANAGING DIRECTOR'" class="text-orange-4">DIRECTOR</span>
+                        <span ng-if="employment.position === 'MANAGING PARTNER'" class="text-orange-4">PARTNER</span>
+                    </h4>
+                    <div>
+                        <img ng-src="{{employment.thumbUrl}}" class="img-responsive">
+                    </div>
+                    <h4 class="text-center">{{employment.details.name}}, {{employment.details.place}}
+                    </h4>
+                    <ul style="padding: 0 15px" ng-repeat="each in employment.description track by $index">
+                        <li style="margin-bottom: 10px">
+                            <div><strong>{{each.section}}</strong></div>
+                            <ul style="padding: 0 15px" ng-repeat="each in each.points track by $index">
+                                <li><i class="fa fa-check text-orange-4"></i> {{each}}</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </section>
