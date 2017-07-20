@@ -171,8 +171,8 @@ define(['angularAMD', 'uiRouter', 'bootstrapLightbox', 'angularSanitize', 'angul
                 thumbUrl: 'css/images/luxuria.png',
                 caption: 'The Luxuria retail brand was born in 2014, and has grown to 5 Retail Store Locations in high traffic value destinations in unite Arab Emirates and a well curated website that supports direct Consumer communication. Luxuria offers classic watches for men, elegant gold and silver watches for women, where each watch is a paragon of quality and precision engineering.',
                 details: {
-                    name: 'Luxuria',
-                    place: 'Abu Dhabi',
+                    name: 'LUXURIA',
+                    place: 'ABU DHABI',
                 },
                 description: [{
                     section: 'Retail',
@@ -198,7 +198,7 @@ define(['angularAMD', 'uiRouter', 'bootstrapLightbox', 'angularSanitize', 'angul
                 caption: '',
                 details: {
                     name: 'D\'SIGN INTERIOR',
-                    place: 'Fujairah',
+                    place: 'FUJAIRAH',
                 },
                 description: [{
                     section: 'Home',
@@ -222,8 +222,8 @@ define(['angularAMD', 'uiRouter', 'bootstrapLightbox', 'angularSanitize', 'angul
                 url: 'css/images/amigos.png',
                 thumbUrl: 'css/images/amigos.png',
                 details: {
-                    name: 'Amigos Exhibition LLC',
-                    place: 'Dubai',
+                    name: 'AMIGOS EXHIBITION LLC',
+                    place: 'DUBAI',
                 },
                 description: [{
                     section: 'Designing',

@@ -5,7 +5,7 @@
         </div>
     </div>
 </section>
-<section id="profile" class="clearfix sec-padding">
+<section class="clearfix sec-padding">
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-12 col-xs-12 bmargin">
@@ -36,15 +36,13 @@
             <div class="clearfix"></div>
             <div ng-repeat="employment in employmentImages" ng-click="openLightboxModal('employment', $index)" class="col-12 col-md-6 col-lg-4">
                 <div class="box section-light">
-                    <h4 class="text-center" style="font-weight: bold">
-                        <span>MANAGING</span>
-                        <span ng-if="employment.position === 'MANAGING DIRECTOR'" class="text-orange-4">DIRECTOR</span>
-                        <span ng-if="employment.position === 'MANAGING PARTNER'" class="text-orange-4">PARTNER</span>
+                    <h4 class="text-center" style="font-weight: bold">{{employment.details.name}}, <span class="text-orange-4">{{employment.details.place}}</span>
                     </h4>
                     <div>
                         <img ng-src="{{employment.thumbUrl}}" class="img-responsive">
                     </div>
-                    <h4 class="text-center">{{employment.details.name}}, {{employment.details.place}}
+                    <h4 class="text-center">
+                        <span>{{employment.position}}</span>
                     </h4>
                     <ul style="padding: 0 15px" ng-repeat="each in employment.description track by $index">
                         <li style="margin-bottom: 10px">

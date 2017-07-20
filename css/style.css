@@ -369,7 +369,8 @@ footer {
     background: #fd602c;
     width: 100%;
     padding: 50px 0;
-    position: relative;
+    position: absolute;
+    bottom: 0;
 }
 
 footer h5 {
@@ -584,12 +585,20 @@ iPad 3
 }
 /* Desktops and laptops ----------- */
 @media only screen  and (min-width : 1224px) {
-/* Styles */
+    footer {
+        height: 300px
+    }
+
+    #employment, #profile, #gallery, #companies {
+        padding-bottom: 380px;
+    }
 }
 
 /* Large screens ----------- */
 @media only screen  and (min-width : 1824px) {
-/* Styles */
+    footer {
+        height: 300px
+    }
 }
 
 /* iPhone 4 ----------- */

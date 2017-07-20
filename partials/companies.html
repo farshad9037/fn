@@ -5,21 +5,26 @@
             <div class="title-line-5"><img src="css/images/about-bottom.png" alt=""></div>
             <div class="clearfix"></div>
             <br>
-            <div class="col-md-4 col-sm-12">
-                <div>
-                    <img src="css/images/luxuria.png" class="img-responsive">
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-12">
-                <div>
-                    <img src="css/images/d-sign.jpg" class="img-responsive">
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-12">
-                <div>
-                    <img src="css/images/amigos.png" class="img-responsive">
+            <div ng-repeat="employment in employmentImages" ng-click="openLightboxModal('employment', $index)" class="col-12 col-md-6 col-lg-4">
+                <div class="box section-light">
+                    <h4 class="text-center" style="font-weight: bold">{{employment.details.name}}, <span class="text-orange-4">{{employment.details.place}}</span>
+                    </h4>
+                    <div>
+                        <img ng-src="{{employment.thumbUrl}}" class="img-responsive">
+                    </div>
+                    <h4 class="text-center">
+                        <span>{{employment.position}}</span>
+                    </h4>
+                    <ul style="padding: 0 15px" ng-repeat="each in employment.description track by $index">
+                        <li style="margin-bottom: 10px">
+                            <div><strong>{{each.section}}</strong></div>
+                            <ul style="padding: 0 15px" ng-repeat="each in each.points track by $index">
+                                <li><i class="fa fa-check text-orange-4"></i> {{each}}</li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
 </section>
