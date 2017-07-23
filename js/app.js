@@ -1,13 +1,12 @@
 
 'use strict';
-define(['angularAMD', 'uiRouter', 'bootstrapLightbox', 'angularSanitize', 'angularAnimate', 'angularReadMore', 'directives/setViewportHeightDirective'], function (angularAMD) {
+define(['angularAMD', 'uiRouter', 'bootstrapLightbox', 'angularSanitize', 'angularAnimate'], function (angularAMD) {
     var app = angular.module('webApp', [
         'ui.router',
         'ngAnimate',
         'ngSanitize',
         'ui.bootstrap',
         'bootstrapLightbox',
-        'hm.readmore'
     ]);
 
     app.run(['$anchorScroll', function ($anchorScroll) {
@@ -108,7 +107,7 @@ define(['angularAMD', 'uiRouter', 'bootstrapLightbox', 'angularSanitize', 'angul
             }]
 
             $scope.galleryImages = [{
-                'url': 'css/images/gallery-1.png',
+                'url': 'css/images/gallery-1.jpg',
                 'thumbUrl': 'css/images/gallery-1-thumb.png',
                 'caption': 'Gifting Mr.Backer Trichur\'s \'DOT ART\' to MOHAMMED BIN HAMAD BIN MOHAMMED AL SHARQI, CROWN PRINCE OF FUJAIRAH, UAE. It was an auspicious moment passing through in my life in the gulf soil, gifting "Dot Art" of HH HAMAD BIN MOHAMMED AL SHARQI.\
                 In the presence of Mr. Faisal AK, Corporate Executive Director Malabar Gold & Co Chairman - COSMOS Sports Intl, Mr. Aak Muhammed Musthafa, MD - AAK Group Of companies, Mr. Muhammad Salikunjo, Director - Malabar Gold & KIMS Hospital, Mr.Muhasin Wandoor, Director - Orange Events Intl, Mr.Backer Trichur - Oracle & Virtuoso dot painting Artist.'
@@ -126,12 +125,12 @@ define(['angularAMD', 'uiRouter', 'bootstrapLightbox', 'angularSanitize', 'angul
                 'caption': 'With Irfan Pathan - Brand ambassador, Address fashion'
             }, {
                 'url': 'css/images/gallery-5.png',
-                'thumbUrl': 'css/images/gallery-5.png',
+                'thumbUrl': 'css/images/gallery-5-thumb.png',
                 'caption': 'With Dignitaries ( DWTC ) RAMADAN SUHOUR at Dubai World Trade Centre (7/06/2017 )'
             }, {
                 'url': 'css/images/gallery-6.png',
-                'thumbUrl': 'css/images/gallery-6.png',
-                'caption': 'Universal Hospital Iftar at Etihad Towers, Abu Dhabi, United Arab Emirates'
+                'thumbUrl': 'css/images/gallery-6-thumb.png',
+                'caption': 'Well spent time with the great motivational speaker Madhu Bhaskaran at Abjad Grand Hotel, DUBAI '
             }, {
                 'url': 'css/images/gallery-7.png',
                 'thumbUrl': 'css/images/gallery-7.png',
@@ -167,8 +166,8 @@ define(['angularAMD', 'uiRouter', 'bootstrapLightbox', 'angularSanitize', 'angul
 
             $scope.employmentImages = [{
                 position: 'MANAGING DIRECTOR',
-                url: 'css/images/luxuria.png',
-                thumbUrl: 'css/images/luxuria.png',
+                url: 'css/images/luxuria.jpg',
+                thumbUrl: 'css/images/luxuria-thumb.jpg',
                 caption: 'The Luxuria retail brand was born in 2014, and has grown to 5 Retail Store Locations in high traffic value destinations in unite Arab Emirates and a well curated website that supports direct Consumer communication. Luxuria offers classic watches for men, elegant gold and silver watches for women, where each watch is a paragon of quality and precision engineering.',
                 details: {
                     name: 'LUXURIA',
@@ -194,8 +193,8 @@ define(['angularAMD', 'uiRouter', 'bootstrapLightbox', 'angularSanitize', 'angul
             }, {
                 position: 'MANAGING DIRECTOR',
                 url: 'css/images/d-sign.jpg',
-                thumbUrl: 'css/images/d-sign.jpg',
-                caption: '',
+                thumbUrl: 'css/images/d-sign-thumb.jpg',
+                caption: 'A team of highly-skilled and extremely prolific designers and interior space decor professionals.',
                 details: {
                     name: 'D\'SIGN INTERIOR',
                     place: 'FUJAIRAH',
@@ -219,8 +218,9 @@ define(['angularAMD', 'uiRouter', 'bootstrapLightbox', 'angularSanitize', 'angul
                 }]
             }, {
                 position: 'MANAGING PARTNER',
-                url: 'css/images/amigos.png',
-                thumbUrl: 'css/images/amigos.png',
+                url: 'css/images/amigos.jpg',
+                thumbUrl: 'css/images/amigos-thumb.jpg',
+                caption: 'Amigos Exhibitions is a end to end solution provider for all your exhibitions in UAE, QATAR AND INDIA. We are capable of undertaking and creating unique concept at all levels from providing full on turn key design and quality custom build stand within your choice.',
                 details: {
                     name: 'AMIGOS EXHIBITION LLC',
                     place: 'DUBAI',
