@@ -108,60 +108,64 @@ define(['angularAMD', 'uiRouter', 'bootstrapLightbox', 'angularSanitize', 'angul
 
             $scope.galleryImages = [{
                 'url': 'css/images/gallery-1.jpg',
-                'thumbUrl': 'css/images/gallery-1-thumb.png',
+                'thumbUrl': 'css/images/gallery-1-thumb.jpg',
                 'caption': 'Gifting Mr.Backer Trichur\'s \'DOT ART\' to MOHAMMED BIN HAMAD BIN MOHAMMED AL SHARQI, CROWN PRINCE OF FUJAIRAH, UAE. It was an auspicious moment passing through in my life in the gulf soil, gifting "Dot Art" of HH HAMAD BIN MOHAMMED AL SHARQI.\
                 In the presence of Mr. Faisal AK, Corporate Executive Director Malabar Gold & Co Chairman - COSMOS Sports Intl, Mr. Aak Muhammed Musthafa, MD - AAK Group Of companies, Mr. Muhammad Salikunjo, Director - Malabar Gold & KIMS Hospital, Mr.Muhasin Wandoor, Director - Orange Events Intl, Mr.Backer Trichur - Oracle & Virtuoso dot painting Artist.'
             }, {
-                'url': 'css/images/gallery-2.png',
-                'thumbUrl': 'css/images/gallery-2-thumb.png',
+                'url': 'css/images/gallery-2.jpg',
+                'thumbUrl': 'css/images/gallery-2-thumb.jpg',
                 'caption': 'MOHAMMED BIN HAMAD BIN MOHAMMED AL SHARQI, CROWN PRINCE OF FUJAIRAH, UAE'
             }, {
-                'url': 'css/images/gallery-3.png',
-                'thumbUrl': 'css/images/gallery-3-thumb.png',
+                'url': 'css/images/gallery-3.jpg',
+                'thumbUrl': 'css/images/gallery-3-thumb.jpg',
                 'caption': 'Masha\'Allah, \“Love your family. Spend time, tomorrow is not promised & today is short.”'
             }, {
-                'url': 'css/images/gallery-4.png',
-                'thumbUrl': 'css/images/gallery-4-thumb.png',
+                'url': 'css/images/gallery-4.jpg',
+                'thumbUrl': 'css/images/gallery-4-thumb.jpg',
                 'caption': 'With Irfan Pathan - Brand ambassador, Address fashion'
             }, {
-                'url': 'css/images/gallery-5.png',
-                'thumbUrl': 'css/images/gallery-5-thumb.png',
+                'url': 'css/images/gallery-5.jpg',
+                'thumbUrl': 'css/images/gallery-5-thumb.jpg',
                 'caption': 'With Dignitaries ( DWTC ) RAMADAN SUHOUR at Dubai World Trade Centre (7/06/2017 )'
             }, {
-                'url': 'css/images/gallery-6.png',
-                'thumbUrl': 'css/images/gallery-6-thumb.png',
+                'url': 'css/images/gallery-6.jpg',
+                'thumbUrl': 'css/images/gallery-6-thumb.jpg',
                 'caption': 'Well spent time with the great motivational speaker Madhu Bhaskaran at Abjad Grand Hotel, DUBAI '
             }, {
-                'url': 'css/images/gallery-7.png',
-                'thumbUrl': 'css/images/gallery-7.png',
+                'url': 'css/images/gallery-7.jpg',
+                'thumbUrl': 'css/images/gallery-7-thumb.jpg',
                 'caption': 'With Mr. HAMAD ABDULLA EISA BUSHAB AL SUWAIDI, Mr. NAZAR ABDULLA EISA BUSHAB AL SUWAIDI, Mr.Faisal AK - Executive Director,Malabar Gold & Diamonds & Hadi Muhammed Faisal '
             }, {
-                'url': 'css/images/gallery-8.png',
-                'thumbUrl': 'css/images/gallery-8.png',
+                'url': 'css/images/gallery-8.jpg',
+                'thumbUrl': 'css/images/gallery-8-thumb.jpg',
                 'caption': 'Indelible Moment at HH Fujairah Palace with Eminent Entrepreneur #DrBRShetty (Executive Chairman NMC Healthcare and Chairman of UAE Exchange),Mr. Faisal AK ,( Corporate Executive Director , Malabar Gold) Mr. Aak Muhammed Musthafa ( MD AAK Group of companies ), Mr. Muhammad Salikunjo ( Director Malbar Gold & Kims Hospital ) , and an oracle & virtuoso dot painting artist Mr.Backer Trichur'
             }, {
-                'url': 'css/images/gallery-9.png',
-                'thumbUrl': 'css/images/gallery-9.png',
-                'caption': 'On behalf of Orange Events, promulgates brochure of Orange Events from Inducement Tycoon Mr. A.K.Faisal (Corporate Executive Director, Malabar Gold & Diamonds ) to the young and Impetus Mogul Mr. Mehroof Manalody, Chairman & MD G-Tec Education)held at Dubai on 13th of June , in presence with Mr.Faisal Neelambra, MD-Luxuria Watches& D\'Sign Interiors ) Mr.Rejy Narein Rajeesh ( Creative Head -Orange Events) , Mr.Jaya Kumar ( Business Designer and Entrepreneur , Florris Group, Habbebi Documents, IMA IT solution & Orange Events ), Muhasin Babu ( Director Marketing -Orange Events ) & Shafeek Vahab ( Director Program- Orange Events )'
+                'url': 'css/images/gallery-9.jpg',
+                'thumbUrl': 'css/images/gallery-9-thumb.jpg',
+                'caption': 'With Jayasurya at Luxuria, Marhaba Mall'
             }, {
-                'url': 'css/images/gallery-10.png',
-                'thumbUrl': 'css/images/gallery-10.png'
+                'url': 'css/images/gallery-10.jpg',
+                'thumbUrl': 'css/images/gallery-10-thumb.jpg',
+                'caption': 'With Mr. Jazbel. KP, Managing Director - Time House Company & Jazal Group of Companies, Mr. Saif Al Shamsi, Managing Director - Address Fashions & Mr. Sameerbabu Wandoor, Sales and Marketing Head - Nellara Group'
             }, {
-                'url': 'css/images/gallery-11.png',
-                'thumbUrl': 'css/images/gallery-11.png'
+                'url': 'css/images/gallery-11.jpg',
+                'thumbUrl': 'css/images/gallery-11-thumb.jpg',
+                'caption': 'With Tovino Thomas and Neeraj Madhav at Luxuria, Marhaba Mall'
             }, {
-                'url': 'css/images/gallery-12.png',
-                'thumbUrl': 'css/images/gallery-12.png',
-                'caption': ''
+                'url': 'css/images/gallery-12.jpg',
+                'thumbUrl': 'css/images/gallery-12-thumb.jpg',
+                'caption': 'With Faisal AK, Corporate Executive Director-Malabar Gold & Diamonds & Mehroof Manalody, Chairman & MD - G TEC Education.'
             }, {
-                'url': 'css/images/gallery-13.png',
-                'thumbUrl': 'css/images/gallery-13.png'
+                'url': 'css/images/gallery-13.jpg',
+                'thumbUrl': 'css/images/gallery-13-thumb.jpg'
             }, {
-                'url': 'css/images/gallery-14.png',
-                'thumbUrl': 'css/images/gallery-14.png'
+                'url': 'css/images/gallery-14.jpg',
+                'thumbUrl': 'css/images/gallery-14-thumb.jpg',
+                'caption': 'with Yussufali MA at Lee Merdian'
             }, {
-                'url': 'css/images/gallery-15.png',
-                'thumbUrl': 'css/images/gallery-15.png'
+                'url': 'css/images/gallery-15.jpg',
+                'thumbUrl': 'css/images/gallery-15-thumb.jpg',
+                'caption': 'EID\'2016'
             }];
 
             $scope.employmentImages = [{

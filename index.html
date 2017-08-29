@@ -36,16 +36,16 @@
                 </div>
                 <div class="collapse navbar-collapse" id="navbar-mobile">
                     <ul class="nav navbar-nav">
-                        <li ng-click="gotoAnchor('home')">
+                        <li ng-click="gotoAnchor('home')" ng-tap="gotoAnchor('home')">
                             <a ui-sref="home" ui-sref-active="active">Home</a>
                         </li>
                         <li>
                             <a ui-sref="profile" ui-sref-active="active">Profile</a>
                         </li>
-                        <li ng-click="goToState('home', 'employment')"><a>Employment</a></li>
+                        <li ng-click="goToState('home', 'employment')" ng-tap="goToState('home', 'employment')"><a>Employment</a></li>
                         <li><a ui-sref="gallery" ui-sref-active="active">Photo Gallery</a></li>
                         <li ui-sref="companies" ui-sref-active="active"><a>Group Companies</a></li>
-                        <li ng-click="goToState('home', 'footer')"><a>Contact</a></li>
+                        <li ng-click="goToState('home', 'footer')" ng-tap="goToState('home', 'footer')"><a>Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -79,19 +79,23 @@
                         </div>
                     </div>
 
-                    <div class="col-md-3 col-sm-6">
+                    <div class="col-md-3 col-sm-6 hidden-xs">
                         <h5>useful links</h5>
                         <ul class="usefulLinks">
-                            <li ng-click="gotoAnchor('home')"><a>Home</a></li>
-                            <li ng-click="gotoAnchor('profile')"><a>Profile</a></li>
-                            <li ng-click="gotoAnchor('employment')"><a>Employment</a></li>
-                            <li ng-click="gotoAnchor('gallery')"><a>Photo Gallery</a></li>
-                            <li ng-click="gotoAnchor('career')"><a>Group Companies</a></li>
-                            <li ng-click="gotoAnchor('works')"><a>Contact</a></li>
+                            <li ng-click="gotoAnchor('home')" ng-tap="gotoAnchor('home')">
+                                <a ui-sref="home" ui-sref-active="active">Home</a>
+                            </li>
+                            <li>
+                                <a ui-sref="profile" ui-sref-active="active">Profile</a>
+                            </li>
+                            <li ng-click="goToState('home', 'employment')" ng-tap="goToState('home', 'employment')"><a>Employment</a></li>
+                            <li><a ui-sref="gallery" ui-sref-active="active">Photo Gallery</a></li>
+                            <li ui-sref="companies" ui-sref-active="active"><a>Group Companies</a></li>
+                            <li ng-click="goToState('home', 'footer')" ng-tap="goToState('home', 'footer')"><a>Contact</a></li>
                         </ul>
                     </div>
 
-                    <div class="col-md-4 col-sm-6 hidden-xs">
+                    <div class="col-md-4 col-sm-6">
                         <h5>Quick Contact</h5>
                         <ul class="contact">
                             <li>Luxuria, G Floor,</li>
