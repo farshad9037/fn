@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--<base href="/">-->
     <title>Faisal Neelambra</title>
+    <meta name="description" content="Managing Director of Luxuria, one of the best retail brand which has grown to a chain of retail stores locating across the popular destinations in UAE. His business chain includes D'SIGN INTERIORS and Amigos Exhibhitions LLC.">
+    <meta name="keywords" content="Faisal,Faisal Neelambra,Entrepreneur,Luxuria,Neelambra,watches">
 
     <!-- CSS Files [Start] -->
     <link rel="icon" type="image/png" href="css/images/machinser.png">
@@ -20,8 +22,11 @@
 </head>
 
 <body ng-controller="CommonController">
+    <!-- JS Files [Start]-->
+    <script src="js/vendors/require/require.min.js" data-main="js/main.js"></script>
+    <!-- JS Files [End]-->
     <div class="mask text-center" ng-hide="isDomLoaded">
-        <h2>Loading...</h2>
+        <h6>Loading...</h6>
     </div>
     <div class="site-wrapper">
         <nav id="header" class="navbar navbar-default navbar-fixed-top">
@@ -35,7 +40,7 @@
                     <!--</a>    -->
                 </div>
                 <div class="collapse navbar-collapse" id="navbar-mobile">
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav"> 
                         <li ng-click="gotoAnchor('home')" ng-tap="gotoAnchor('home')">
                             <a ui-sref="home" ui-sref-active="active">Home</a>
                         </li>
@@ -51,13 +56,14 @@
             </div>
         </nav>
 
-
-        <div ui-view="home"></div>
-        <div ui-view="profile"></div>
-        <div ui-view="employment"></div>
-        <div ui-view="childhood"></div>
-        <div ui-view="gallery"></div>
-        <div ui-view="companies"></div>
+        <div style="min-height: 100vh">
+            <div ui-view="home"></div>
+            <div ui-view="profile"></div>
+            <div ui-view="employment"></div>
+            <div ui-view="childhood"></div>
+            <div ui-view="gallery"></div>
+            <div ui-view="companies"></div>
+        </div>
         <footer id="footer">
             <div class="container">
                 <div class="row">
@@ -98,10 +104,10 @@
                     <div class="col-md-4 col-sm-6">
                         <h5>Quick Contact</h5>
                         <ul class="contact">
-                            <li>Luxuria, G Floor,</li>
-                            <li>Sahara Centre, Al Nahda Street,</li>
-                            <li>Sharjah, UAE</li>
-                            <li>Tel (Office) : +971 50 3476 100</li>
+                            <li>LUXURIA LIFESTYLE WATCHES TRADING LLC</li>
+                            <li>Showroom : Spinneys, basement, Sahara Mall</li>
+                            <li>Al Nahda Street, Sharjah, UAE</li>
+                            <li>Tel (Office) : 04 221 6446</li>
                             <li>Direct : +971 50 3476 100</li>
                             <li>E-mail : <a href="#">faisal@neelambra.com</a></li>
                         </ul>
@@ -109,12 +115,16 @@
                 </div>
             </div>
         </footer>
-
-        <!-- JS Files [Start]-->
-        <script src="js/vendors/require/require.min.js" data-main="js/main.js"></script>
-        <!--<script src="vendors/bootstrap/js/bootstrap.min.js"></script>-->
-        <!-- JS Files [End]-->
     </div>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106746194-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments)};
+        gtag('js', new Date());
+
+        gtag('config', 'UA-106746194-1');
+    </script>
 </body>
 
 </html>

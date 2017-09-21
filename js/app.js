@@ -9,8 +9,9 @@ define(['angularAMD', 'uiRouter', 'bootstrapLightbox', 'angularSanitize', 'angul
         'bootstrapLightbox',
     ]);
 
-    app.run(['$anchorScroll', function ($anchorScroll) {
+    app.run(['$anchorScroll', '$rootScope', function ($anchorScroll, $rootScope) {
         $anchorScroll.yOffset = 80;
+        $rootScope.isDomLoaded = false;
     }]);
 
     app.config([
@@ -77,12 +78,11 @@ define(['angularAMD', 'uiRouter', 'bootstrapLightbox', 'angularSanitize', 'angul
         LightboxProvider.templateUrl = 'partials/gallery-modal.html';
     }]);
 
-    app.controller('CommonController', ['$anchorScroll', '$location', '$scope', 'Lightbox', '$state', '$timeout',
-        function ($anchorScroll, $location, $scope, Lightbox, $state, $timeout) {
-            $scope.isDomLoaded = false;
+    app.controller('CommonController', ['$anchorScroll', '$location', '$scope', 'Lightbox', '$state', '$timeout', '$rootScope',
+        function ($anchorScroll, $location, $scope, Lightbox, $state, $timeout, $rootScope) {
             $scope.$on('$viewContentLoaded', function(){
                 $timeout(function () {
-                    $scope.isDomLoaded = true;
+                    $rootScope.isDomLoaded = true;
                 }, 500);
             });
 
